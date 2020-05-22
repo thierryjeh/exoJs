@@ -24,18 +24,20 @@ const entrepreneurs = [
 
  result = entrepreneurs.filter(entrepreneur => entrepreneur.year < 1980 && entrepreneur.year > 1969);
 
+console.log("Combien sont nés dans les années 70?")
 console.log(result);
 
 console.log(entrepreneurs[0].first, entrepreneurs[0].last)
 
 const name = result.map( element => `${element.first} ${element.last}`
   );
-
+console.log("Leurs noms?")
 console.log(name);
 
 const age = result.map( element => `${element.first} ${element.last} a ${2020 - element.year} ans `
   );
 
+console.log("Quel age aujourd'hui?")
 console.log(age)
 
 /*µordre alphabétique*/
@@ -50,5 +52,6 @@ return (a.nom > b.nom)?1:-1;
 /*console.log(entrepreneurs.sort(tri));*/
 
 const aName = result.sort((a,b) => (a.last > b.last) ? 1 : ((b.last > a.last) ? -1 : 0));
+console.log("Par ordre alphabétique :")
 console.log(aName)
 
